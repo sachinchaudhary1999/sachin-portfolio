@@ -112,30 +112,74 @@ export const SkillsInfo = [
   },
 ];
 
-  export const experiences = [
-    {
-      id: 0,
-      img:Brostartup ,
-      role: "Fullstack Developer",
-      company: "Brostartup Ventures Pvt. Ltd.",
-      date: "November 2024 - April 2025",
-      desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
-      skills: [
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "Material UI",
-        "JavaScript",
-        "React JS",
-        // "TypeScript",
-        "Node JS",
-        "Tailwind CSS",
-        "MongoDb",
-        "My SQL",
-        // "Redux",
-        // " Next Js",
-      ],
-    },
+export const experiences = [
+  {
+    id: 0,
+    img: "💼",
+    role: "Frontend Developer (Freelance / Project-Based)",
+    company: "Self / Startup Collaboration",
+    date: "Jan 2026 – Present",
+    desc: [
+      "Developing responsive frontend applications using React and Tailwind CSS",
+      "Building full-stack MERN projects including authentication and REST APIs",
+      "Improving UI/UX and optimizing performance of web applications",
+    ],
+    skills: ["React JS", "JavaScript", "Tailwind CSS", "Node JS", "MongoDB"],
+  },
+  {
+    id: 1,
+    img: "🏢",
+    role: "Junior MERN Stack Developer (Frontend-focused)",
+    company: "Praveg’s Grand Eulogia",
+    date: "Jun 2025 – Dec 2025",
+    desc: [
+      "Built reusable UI components using React.js",
+      "Integrated REST APIs and handled async data flow",
+      "Improved application responsiveness and UX",
+    ],
+    skills: ["React JS", "JavaScript", "Tailwind CSS", "API Integration"],
+  },
+  {
+    id: 2,
+    img: "🎓",
+    role: "Full Stack Developer Intern",
+    company: "Brostartup Ventures Pvt. Ltd.",
+    date: "Nov 2024 – Apr 2025",
+    desc: [
+      "Worked on frontend and backend using MERN stack",
+      "Built responsive UI and integrated APIs",
+      "Debugged and tested applications",
+    ],
+    skills: ["React JS", "Node JS", "MongoDB", "JavaScript"],
+  },
+];
+
+
+
+  // export const experiences = [
+  //   {
+  //     id: 0,
+  //     img:Brostartup ,
+  //     role: "Fullstack Developer",
+  //     company: "Brostartup Ventures Pvt. Ltd.",
+  //     date: "November 2024 - April 2025",
+  //     desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
+  //     skills: [
+  //       "HTML",
+  //       "CSS",
+  //       "Bootstrap",
+  //       "Material UI",
+  //       "JavaScript",
+  //       "React JS",
+  //       // "TypeScript",
+  //       "Node JS",
+  //       "Tailwind CSS",
+  //       "MongoDb",
+  //       "My SQL",
+  //       // "Redux",
+  //       // " Next Js",
+  //     ],
+  //   },
     // {
     //   id: 1,
     //   img: agcLogo,
@@ -169,7 +213,7 @@ export const SkillsInfo = [
     //     "Material UI",
     //   ],
     // },
-  ];
+  // ];
   
   export const education = [
      {
