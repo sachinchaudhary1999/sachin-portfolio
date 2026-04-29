@@ -19,7 +19,7 @@ const Education = () => {
       {/* Timeline */}
       <div className="relative">
 
-        {/* ✅ Vertical Line */}
+        {/* Vertical Line */}
         <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 w-1 bg-white h-full z-0"></div>
 
         {education.map((edu, index) => (
@@ -30,7 +30,7 @@ const Education = () => {
             }`}
           >
 
-            {/* ✅ Timeline Circle */}
+            {/* Timeline Circle */}
             <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-0">
               <img
                 src={edu.img}
@@ -39,7 +39,7 @@ const Education = () => {
               />
             </div>
 
-            {/* ✅ Card (on top) */}
+            {/* Card */}
             <div
               className={`relative z-10 w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md ${
                 index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
@@ -83,10 +83,14 @@ const Education = () => {
                   </p>
                 )}
 
-              {/* Description */}
-              <p className="mt-4 text-gray-400 leading-relaxed">
-                {edu.desc}
-              </p>
+              {/* Description (FIXED) */}
+              <ul className="mt-4 text-gray-400 list-disc pl-5 space-y-1">
+                {Array.isArray(edu.desc)
+                  ? edu.desc.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))
+                  : <li>{edu.desc}</li>}
+              </ul>
 
             </div>
           </div>
