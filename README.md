@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ## 🛠️ Tech Stack
@@ -37,3 +38,5 @@ npm start
 
 ```bash
 npm run build
+=======
+>>>>>>> 47df7d4 (updated portfolio README)
