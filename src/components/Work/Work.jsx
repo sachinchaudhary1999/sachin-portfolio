@@ -30,14 +30,14 @@ const Work = () => {
             {/* CARD */}
             <div className="bg-[#0f0f1a] rounded-2xl h-full flex flex-col overflow-hidden backdrop-blur-md border border-white/10 group-hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] transition-all duration-300">
 
-              {/* IMAGE */}
-              <div className="overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+              {/* ✅ IMAGE FIX (aligned left, no side padding feel) */}
+              <div className="h-52 bg-[#0f0f1a] overflow-hidden">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+  />
+</div>
 
               {/* CONTENT */}
               <div className="p-6 flex flex-col flex-grow">
@@ -94,7 +94,7 @@ const Work = () => {
         ))}
       </div>
 
-      {/* MODAL */}
+      {/* MODAL (unchanged) */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm">
           <div className="bg-[#0f0f1a] rounded-xl max-w-3xl w-[90%] p-6 relative border border-white/10">

@@ -35,24 +35,24 @@ import csharpLogo from './assets/tech_logo/csharp.png';
 
 // Experience Section Logo's
 import Brostartup from './assets/company_logo/bro.png';
-import agcLogo from './assets/company_logo/agc_logo.png';
-import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
+// import agcLogo from './assets/company_logo/agc_logo.png';
+// import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
 
 // Education Section Logo's
 import glaLogo from './assets/education_logo/knit logo.jpg';
 import bsaLogo from './assets/education_logo/LU.jpg';
 import vpsLogo from './assets/education_logo/xavier.png';
 
-// Project Section Logo's
-import githubdetLogo from './assets/work_logo/github_det.png';
-import csprepLogo from './assets/work_logo/cs_prep.png';
-import movierecLogo from './assets/work_logo/movie_rec.png';
-import taskremLogo from './assets/work_logo/task_rem.png';
-import npmLogo from './assets/work_logo/npm.png';
-import webverLogo from './assets/work_logo/web_dig.png';
-import cmLogo from './assets/work_logo/cm.png';
-import imagesearchLogo from './assets/work_logo/image_search.png';
-import removebgLogo from './assets/work_logo/remove_bg.png';
+// // Project Section Logo's
+// import githubdetLogo from './assets/work_logo/github_det.png';
+// import csprepLogo from './assets/work_logo/cs_prep.png';
+// import movierecLogo from './assets/work_logo/movie_rec.png';
+// import taskremLogo from './assets/work_logo/task_rem.png';
+// import npmLogo from './assets/work_logo/npm.png';
+// import webverLogo from './assets/work_logo/web_dig.png';
+// import cmLogo from './assets/work_logo/cm.png';
+// import imagesearchLogo from './assets/work_logo/image_search.png';
+import BiteRush from './assets/work_logo/BiteRush.png';
 
 
 export const SkillsInfo = [
@@ -201,7 +201,7 @@ export const experiences = [
     date: "Apr 2015 - June 2016",
     degree: "CBSE (X), Science with Computer Application",
     desc: [
-      "Studied Science with Computer Applications",
+      "Studied Science with Computer Application",
       "Developed early interest in computers and programming"
     ],
   },
@@ -210,17 +210,28 @@ export const experiences = [
    
   
 export const projects = [
-  {
+
+    {
     id: 1,
-    title: "Food Delivery MERN App",
+    title: "BiteRush – Full-Stack Food Delivery Platform",
     description:
-      "Building a full-stack food ordering platform with authentication, cart system, and order management. Implemented product listing and cart functionality, currently working on admin panel and order features.",
-    image: "/food.png", // add your image
-    tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
-    github: "https://github.com/your-username/food-app",
+      "A production-ready food delivery platform built using the MERN stack. Features include JWT-based authentication with protected routes, real-time cart and order tracking, and secure payment integration using Stripe/Razorpay. Developed a comprehensive admin dashboard with analytics for managing users, orders, and inventory, along with dynamic product listings and a responsive UI. Currently enhancing features and optimizing payment workflows.",
+    image: BiteRush,
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Stripe",
+      "Razorpay",
+      "JWT"
+    ],
+    github: "https://github.com/sachinchaudhary1999/BiteRush.git",
     webapp: "https://your-food-app.vercel.app",
-    status: "In Progress 🚧",
+    status: "🚀 Feature Enhancement Ongoing",
   },
+  
   {
     id: 2,
     title: "Airbnb-Inspired Booking Platform",
