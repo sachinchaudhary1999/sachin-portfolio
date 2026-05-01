@@ -9,7 +9,7 @@
 
 ## 📁 Features
 
-- Responsive design for all screen sizes 📱💻
+- Responsive design for all screens sizes 📱💻
 - Smooth scroll and animation effects ✨
 - Clean and modular React components 🧩
 - Easy to customize with Tailwind utility classes 🎯
