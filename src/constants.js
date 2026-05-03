@@ -232,17 +232,28 @@ export const projects = [
     status: "🚀 Feature Enhancement Ongoing",
   },
   
+  // {
+  //   id: 2,
+  //   title: "Airbnb-Inspired Booking Platform",
+  //   description:
+  //     "Developing a property listing and booking system with authentication and protected routes. Implemented listing UI and backend APIs, currently working on booking validation and user dashboard.",
+  //   image: "/airbnb.png", // add your image
+  //   tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
+  //   github: "https://github.com/your-username/airbnb-clone",
+  //   webapp: "https://your-airbnb.vercel.app",
+  //   status: "In Progress 🚧",
+  // },
   {
-    id: 2,
-    title: "Airbnb-Inspired Booking Platform",
-    description:
-      "Developing a property listing and booking system with authentication and protected routes. Implemented listing UI and backend APIs, currently working on booking validation and user dashboard.",
-    image: "/airbnb.png", // add your image
-    tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
-    github: "https://github.com/your-username/airbnb-clone",
-    webapp: "https://your-airbnb.vercel.app",
-    status: "In Progress 🚧",
-  },
+  id: 2,
+  title: "TravelNest – Vacation Rental Platform",
+  description:
+    "Developing a full-stack vacation rental platform with secure authentication, property listings, bookings, reviews, wishlist, and messaging. Designed RESTful APIs, implemented protected routes, and built a responsive UI using Tailwind. Currently enhancing booking validation, availability logic, and user dashboard.",
+  image: "/airbnb.png",
+  tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind", "JWT", "Cloudinary"],
+  github: "https://github.com/sachinchaudhary1999/TravelNest.git",
+  webapp: "https://your-airbnb.vercel.app",
+  status: "Feature Enhancement Ongoing"
+},
 ];
 
 
