@@ -35,8 +35,7 @@ import csharpLogo from './assets/tech_logo/csharp.png';
 
 // Experience Section Logo's
 import Brostartup from './assets/company_logo/bro.png';
-// import agcLogo from './assets/company_logo/agc_logo.png';
-// import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
+
 
 // Education Section Logo's
 import glaLogo from './assets/education_logo/knit logo.jpg';
@@ -44,15 +43,9 @@ import bsaLogo from './assets/education_logo/LU.jpg';
 import vpsLogo from './assets/education_logo/xavier.png';
 
 // // Project Section Logo's
-// import githubdetLogo from './assets/work_logo/github_det.png';
-// import csprepLogo from './assets/work_logo/cs_prep.png';
-// import movierecLogo from './assets/work_logo/movie_rec.png';
-// import taskremLogo from './assets/work_logo/task_rem.png';
-// import npmLogo from './assets/work_logo/npm.png';
-// import webverLogo from './assets/work_logo/web_dig.png';
-// import cmLogo from './assets/work_logo/cm.png';
-// import imagesearchLogo from './assets/work_logo/image_search.png';
+
 import BiteRush from './assets/work_logo/BiteRush.png';
+import TravelNest from './assets/work_logo/TravelNest.png';
 
 
 export const SkillsInfo = [
@@ -232,23 +225,12 @@ export const projects = [
     status: "🚀 Feature Enhancement Ongoing",
   },
   
-  // {
-  //   id: 2,
-  //   title: "Airbnb-Inspired Booking Platform",
-  //   description:
-  //     "Developing a property listing and booking system with authentication and protected routes. Implemented listing UI and backend APIs, currently working on booking validation and user dashboard.",
-  //   image: "/airbnb.png", // add your image
-  //   tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
-  //   github: "https://github.com/your-username/airbnb-clone",
-  //   webapp: "https://your-airbnb.vercel.app",
-  //   status: "In Progress 🚧",
-  // },
-  {
+{
   id: 2,
   title: "TravelNest – Vacation Rental Platform",
   description:
     "Developing a full-stack vacation rental platform with secure authentication, property listings, bookings, reviews, wishlist, and messaging. Designed RESTful APIs, implemented protected routes, and built a responsive UI using Tailwind. Currently enhancing booking validation, availability logic, and user dashboard.",
-  image: "/airbnb.png",
+  image: TravelNest,
   tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind", "JWT", "Cloudinary"],
   github: "https://github.com/sachinchaudhary1999/TravelNest.git",
   webapp: "https://your-airbnb.vercel.app",
