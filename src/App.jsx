@@ -23,7 +23,6 @@ const App = () => {
          <Work />
         <Skills />
         <Experience />
-        <Work />
         <Education />
         <Contact />
         <Footer />
