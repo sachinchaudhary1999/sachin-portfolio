@@ -222,7 +222,7 @@ export const projects = [
     ],
     github: "https://github.com/sachinchaudhary1999/BiteRush.git",
     webapp: "https://your-food-app.vercel.app",
-    status: "🚀 Feature Enhancement Ongoing",
+    status: "Feature Enhancement Ongoing",
   },
   
 {
