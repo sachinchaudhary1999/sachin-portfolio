@@ -227,15 +227,26 @@ export const projects = [
   
 {
   id: 2,
-  title: "TravelNest – Vacation Rental Platform",
+  title: "TravelNest – Full-Stack Vacation Rental Platform",
   description:
-    "Developing a full-stack vacation rental platform with secure authentication, property listings, bookings, reviews, wishlist, and messaging. Designed RESTful APIs, implemented protected routes, and built a responsive UI using Tailwind. Currently enhancing booking validation, availability logic, and user dashboard.",
+    "Built a production-ready vacation rental platform with secure authentication, property listings, booking management, wishlist system, reviews, and responsive dashboards. Developed a fully functional admin panel for managing users, listings, bookings, and platform activity. Built RESTful APIs with protected routes, integrated Cloudinary for optimized image delivery, and implemented JWT-based authentication with role-based access control. Focused on scalable backend architecture, responsive UI design, booking validation, availability management, and performance optimization using React, Express, MongoDB, and Tailwind CSS.",
   image: TravelNest,
-  tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind", "JWT", "Cloudinary"],
+  tags: [
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Tailwind CSS",
+    "JWT",
+    "Cloudinary",
+    "REST API",
+    "Admin Dashboard",
+    "Responsive Design"
+  ],
   github: "https://github.com/sachinchaudhary1999/TravelNest.git",
-  webapp: "https://travel-nest-jade.vercel.app/",
-  status: "Feature Enhancement Ongoing"
-},
+  webapp: "https://travel-nest-rho.vercel.app",
+  status: "Actively Improving & Scaling"
+}
 ];
 
 
