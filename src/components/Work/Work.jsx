@@ -83,6 +83,9 @@ const Work = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
+                    decoding="async"
+                    width="100%"
                     className="w-full h-full object-cover object-left-top"
                   />
                 </div>
