@@ -46,7 +46,7 @@ import vpsLogo from './assets/education_logo/xavier.png';
 
 import BiteRush from './assets/work_logo/BiteRush.png';
 import TravelNest from './assets/work_logo/TravelNest.png';
-
+import PortfolioImage from './assets/work_logo/Portfolio.png';
 
 export const SkillsInfo = [
   {
@@ -246,7 +246,26 @@ export const projects = [
   github: "https://github.com/sachinchaudhary1999/TravelNest.git",
   webapp: "https://travel-nest-rho.vercel.app",
   status: "Actively Improving & Scaling"
+},
+{
+  id: 3,
+  title: "Developer Portfolio – Personal Branding Website",
+  description:
+    "Designed and developed a modern developer portfolio to showcase projects, technical skills, experience, and production-ready applications. Built with a responsive and interactive UI, smooth animations, reusable React components, and optimized deployment workflows. Includes dedicated project showcase pages, modern dark-mode design, and responsive layouts for all devices.",
+  image: PortfolioImage,
+  tags: [
+    "React",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Responsive Design",
+    "Vercel",
+    "UI/UX"
+  ],
+  github: "https://github.com/your-portfolio-repo",
+  webapp: "https://your-portfolio-link.vercel.app",
+  status: "Live"
 }
+
 ];
 
 
