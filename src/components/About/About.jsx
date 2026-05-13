@@ -4,10 +4,21 @@ import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/Profile.webp";
 
 const About = () => {
+
+
+    const highlights = [
+    "MERN Stack",
+    "REST APIs",
+    "Authentication",
+    "Responsive UI",
+  ];
+
+
+
   return (
     <section
       id="about"
-      className="py-10 px-[5vw] md:px-[6vw] lg:px-[10vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className=" scroll-mt-24 py-10 px-[5vw] md:px-[6vw] lg:px-[10vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
 
@@ -43,29 +54,23 @@ const About = () => {
 
           {/* Description */}
           <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
-            I’m a MERN Stack Developer focused on building real-world web applications.
-            I specialize in React, Node.js, and MongoDB, and enjoy creating clean UI with
-            strong backend logic. Currently, I’m working on projects like a full-stack
-            Food Delivery App and an Airbnb-style booking platform, where I focus on
-            authentication, API design, and user experience.
+          I’m a MERN Stack Developer skilled in building modern full-stack web applications using React.js, Node.js, Express.js, and MongoDB. I have experience creating responsive UIs, developing REST APIs, handling authentication, and managing databases efficiently.
+
+My skills include JavaScript, React, Redux, Tailwind CSS, Node.js, Express.js, MongoDB, Git, GitHub, Cloudinary, Vercel, Render, and AWS. I enjoy building scalable and user-friendly applications with clean design and strong backend logic.
+
+
           </p>
-
-          {/* Highlights */}
-          <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
-            <span className="bg-[#1e1b2e] text-purple-400 text-sm px-4 py-1 rounded-full">
-              MERN Stack
-            </span>
-            <span className="bg-[#1e1b2e] text-purple-400 text-sm px-4 py-1 rounded-full">
-              REST APIs
-            </span>
-            <span className="bg-[#1e1b2e] text-purple-400 text-sm px-4 py-1 rounded-full">
-              Authentication
-            </span>
-            <span className="bg-[#1e1b2e] text-purple-400 text-sm px-4 py-1 rounded-full">
-              Responsive UI
-            </span>
-          </div>
-
+{/* Highlights */}
+<div className="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
+  {highlights.map((item, index) => (
+    <span
+      key={index}
+      className="bg-[#1e1b2e]/80 backdrop-blur-sm text-purple-400 text-sm px-4 py-2 rounded-full border border-purple-500/20 hover:scale-105 hover:border-purple-500/50 transition duration-300"
+    >
+      {item}
+    </span>
+  ))}
+</div>
           {/* Button */}
           <a
             href="https://drive.google.com/file/d/1OneK9BQJDjSqPQ5dNeWBETebC5EgHlYf/view?usp=sharing"
