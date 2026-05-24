@@ -87,7 +87,7 @@ export const SkillsInfo = [
       // { name: 'Python', logo: pythonLogo },
       // { name: 'C-Sharp', logo: csharpLogo },
       { name: 'JavaScript', logo: javascriptLogo },
-      { name: 'TypeScript', logo: typescriptLogo },
+      // { name: 'TypeScript', logo: typescriptLogo },
     ],
   },
   {
@@ -261,8 +261,8 @@ export const projects = [
     "Vercel",
     "UI/UX"
   ],
-  github: "https://github.com/your-portfolio-repo",
-  webapp: "https://your-portfolio-link.vercel.app",
+  github: "https://github.com/sachinchaudhary1999",
+  webapp: "https://sachin-portfolio-black.vercel.app/",
   status: "Live"
 }
 

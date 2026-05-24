@@ -10,8 +10,9 @@ const categoryMap = {
 };
 
 const projectStats = {
-  1: { features: "20+", apis: "15+", responsive: "100%" },
-  2: { features: "50+", apis: "25+", responsive: "100%" },
+  1: { features: "70+", apis: "60+", responsive: "100%" },
+  2: { features: "50+", apis: "46+", responsive: "100%" },
+  3: { features: "15+", apis: "01+", responsive: "100%" },
 };
 
 const Work = () => {
