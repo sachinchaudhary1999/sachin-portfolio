@@ -221,7 +221,7 @@ export const projects = [
       "JWT"
     ],
     github: "https://github.com/sachinchaudhary1999/BiteRush.git",
-    webapp: "https://bite-rush-kwhh.vercel.app",
+    webapp: "https://bite-rush-pearl.vercel.app/",
     status: "Feature Enhancement Ongoing",
   },
   
