@@ -230,7 +230,7 @@ export const projects = [
   title: "TravelNest – Full-Stack Vacation Rental Platform",
   description:
     "Built a production-ready vacation rental platform with secure authentication, property listings, booking management, wishlist system, reviews, and responsive dashboards. Developed a fully functional admin panel for managing users, listings, bookings, and platform activity. Built RESTful APIs with protected routes, integrated Cloudinary for optimized image delivery, and implemented JWT-based authentication with role-based access control. Focused on scalable backend architecture, responsive UI design, booking validation, availability management, and performance optimization using React, Express, MongoDB, and Tailwind CSS.",
-  image: TravelNest,
+  image: TravelNest,PortfolioImage,
   tags: [
     "React",
     "Node.js",
