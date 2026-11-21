@@ -1,78 +1,68 @@
+import { Suspense, lazy, useCallback, useEffect, useState } from "react";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import CommandPalette from "./components/CommandPalette";
+import HomePage from "./pages/HomePage";
 
-import React, { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+const ProjectPage = lazy(() => import("./pages/ProjectPage"));
 
-import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
-import Work from "./components/Work/Work";
-import ProjectDetails from "./components/Work/ProjectDetails";
-import Education from "./components/Education/Education";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import BlurBlob from "./components/BlurBlob";
+function NotFound() {
+  return (
+    <main id="main" className="container-page pb-24 pt-36">
+      <h1 className="text-3xl">Page not found</h1>
+      <p className="mt-3 text-muted">That address doesn’t match any page on this site.</p>
+      <Link to="/" className="btn btn-primary mt-6">Go to the home page</Link>
+    </main>
+  );
+}
 
-const HomePage = () => (
-  <>
-    <About />
-    <Work />
-    <Skills />
-    <Experience />
-    <Education />
-    <Contact />
-  </>
-);
+export default function App() {
+  const { pathname, hash } = useLocation();
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [replayToken, setReplayToken] = useState(0);
+  const replayFlow = useCallback(() => setReplayToken((t) => t + 1), []);
 
-const App = () => {
-  const location = useLocation();
-  const isProjectPage = location.pathname.startsWith("/projects/");
-
+  // Scroll to #hash targets, otherwise to the top on route changes.
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.slice(1);
-
-      requestAnimationFrame(() => {
-        document.getElementById(id)?.scrollIntoView({
-          behavior: "smooth",
-        });
-      });
+    if (hash) {
+      const id = hash.slice(1);
+      requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }));
     } else {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
+      window.scrollTo({ top: 0, behavior: "instant" });
     }
-  }, [location.pathname, location.hash]);
+  }, [pathname, hash]);
+
+  // Ctrl/Cmd + K toggles the command palette from anywhere.
+  useEffect(() => {
+    const onKey = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setPaletteOpen((o) => !o);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#050414]">
-      <BlurBlob
-        position={{ top: "35%", left: "20%" }}
-        size={{ width: "30%", height: "40%" }}
-      />
-
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-
-      <div className="relative z-10 pt-20">
-        <Navbar />
-
+    <>
+      <a
+        href="#main"
+        className="sr-only z-50 rounded-md bg-accent px-4 py-2 text-accent-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+      >
+        Skip to content
+      </a>
+      <Navbar onOpenPalette={() => setPaletteOpen(true)} />
+      <Suspense fallback={<div className="min-h-screen" aria-busy="true" />}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-
-          <Route
-            path="/projects/:id"
-            element={<ProjectDetails />}
-          />
-
-          <Route path="*" element={<HomePage />} />
+          <Route path="/" element={<HomePage replayToken={replayToken} />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-
-        {!isProjectPage && <Footer />}
-        {isProjectPage && <Footer />}
-      </div>
-    </div>
+      </Suspense>
+      <Footer />
+      <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} onReplayFlow={replayFlow} />
+    </>
   );
-};
-
-export default App;
+}

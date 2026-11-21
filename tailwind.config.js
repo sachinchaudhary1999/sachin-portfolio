@@ -1,25 +1,29 @@
-// tailwind.config.js
+const token = (name) => `rgb(var(--${name}) / <alpha-value>)`;
+
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      colors: {
+        bg: token("bg"),
+        surface: token("surface"),
+        ink: token("ink"),
+        muted: token("muted"),
+        line: token("line"),
+        accent: token("accent"),
+        "accent-ink": token("accent-ink"),
+        ok: token("ok"),
+      },
+      fontFamily: {
+        sans: ['"IBM Plex Sans"', "system-ui", "sans-serif"],
+        mono: ['"IBM Plex Mono"', "ui-monospace", "SFMono-Regular", "monospace"],
+      },
       keyframes: {
-        blob: {
-          '0%': { transform: 'scale(1)' },
-          '33%': { transform: 'scale(1.2)' },
-          '66%': { transform: 'scale(0.8)' },
-          '100%': { transform: 'scale(1)' },
-        },
+        ping2: { "75%, 100%": { transform: "scale(2.2)", opacity: "0" } },
       },
-      animation: {
-        blob: 'blob 10s infinite',
-      },
-      backgroundImage: {
-        'skills-gradient': 'linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%)',
-      },
+      animation: { ping2: "ping2 2.4s cubic-bezier(0,0,.2,1) infinite" },
     },
   },
   plugins: [],

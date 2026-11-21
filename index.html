@@ -1,43 +1,79 @@
-
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-
-    <link rel="icon" type="image/svg+xml" href="./src/assets/Title.png" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Apply the saved/system theme before first paint (prevents a flash) -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          document.documentElement.classList.toggle("dark", t === "dark");
+          document.documentElement.style.colorScheme = t;
+        } catch (e) {}
+      })();
+    </script>
+
+    <!--seo-start-->
+    <title>Sachin Chaudhary | MERN Stack Developer</title>
     <meta
       name="description"
-      content="Sachin Chaudhary is a MERN Stack Developer skilled in React.js, Node.js, Express.js, MongoDB, and building modern full-stack web applications."
+      content="Sachin Chaudhary is a full-stack developer building MERN applications with React, Node.js, Express and MongoDB. Case studies, architecture notes and live demos."
     />
-
-    <meta
-      name="keywords"
-      content="Sachin Chaudhary, MERN Stack Developer, React Developer, Node.js Developer, Full Stack Developer, MongoDB, JavaScript"
-    />
-
     <meta name="author" content="Sachin Chaudhary" />
+    <meta name="theme-color" content="#09142b" />
+    <link rel="canonical" href="https://sachin-portfolio-black.vercel.app/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
-    <!-- Open Graph / Social Preview -->
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Sachin Chaudhary | MERN Stack Developer" />
-
     <meta
       property="og:description"
-      content="MERN Stack Developer building modern full-stack web applications with React.js, Node.js, Express.js, and MongoDB."
+      content="Full-stack MERN developer. Case studies, architecture notes and live demos of production-style apps."
     />
+    <meta property="og:url" content="https://sachin-portfolio-black.vercel.app/" />
+    <meta property="og:image" content="https://sachin-portfolio-black.vercel.app/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <meta property="og:image" content="/Title.png" />
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sachin Chaudhary",
+        "jobTitle": "Full-Stack Developer (MERN)",
+        "url": "https://sachin-portfolio-black.vercel.app/",
+        "sameAs": [
+          "https://github.com/sachinchaudhary1999",
+          "https://www.linkedin.com/in/sachin-chaudhary-ba6a08293"
+        ],
+        "knowsAbout": ["React", "Node.js", "Express", "MongoDB", "REST APIs", "JWT authentication"]
+      }
+    </script>
+    <!--seo-end-->
 
-    <meta property="og:type" content="website" />
+    <!-- Google Search Console HTML-tag verification goes here, outside the seo markers, e.g.
+         <meta name="google-site-verification" content="YOUR_CODE" /> -->
 
-    <title>Sachin Chaudhary | MERN Stack Developer</title>
+    <!-- Search engines: allow full previews. Verify ownership via Search Console (see SEO-GUIDE.md). -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <style>
+      /* Prerendered HTML exists for crawlers and no-JS clients; React replaces it on load. */
+      #root[data-prerendered] > * { visibility: hidden; }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
     <div id="root"></div>
-
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

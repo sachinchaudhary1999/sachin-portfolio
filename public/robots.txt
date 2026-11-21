@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sachin-portfolio-black.vercel.app/sitemap.xml

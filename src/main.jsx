@@ -1,11 +1,18 @@
-import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import ThemeProvider from "./hooks/ThemeProvider";
 import "./index.css";
 import App from "./App.jsx";
 
-createRoot(document.getElementById("root")).render(
+const rootEl = document.getElementById("root");
+// Replace the prerendered HTML (kept for crawlers) with the interactive app.
+rootEl.removeAttribute("data-prerendered");
+rootEl.replaceChildren();
+
+createRoot(rootEl).render(
   <BrowserRouter>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </BrowserRouter>
 );
